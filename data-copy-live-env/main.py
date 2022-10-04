@@ -5,12 +5,14 @@
 import sys
 from config import DB_DETAILS
 from util import get_tables
+p='table_list.txt'
 def systemm():
     env=sys.argv[1]
     dbdetails=DB_DETAILS[env]
-    tables=get_tables('table_list.txt')
+    tables = get_tables(p)
     for table in tables["table_name"]:
         print(table)
+
 
 
 
