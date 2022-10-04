@@ -4,15 +4,18 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import sys
 from config import DB_DETAILS
-def system():
+from util import get_tables
+def systemm():
     env=sys.argv[1]
     dbdetails=DB_DETAILS[env]
-    print(dbdetails)
+    tables=get_tables('table_list.txt')
+    for table in tables["table_name"]:
+        print(table)
 
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    system()
+    systemm()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
